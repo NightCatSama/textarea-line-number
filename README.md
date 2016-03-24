@@ -32,7 +32,7 @@ textarea标签自动显示行号(Textarea tags automatically displays line Numbe
 支持使用类名可同时多个配置
 ```js
 	$(".textarea").setTextareaCount({
-	  width: "30px",
+	  	width: "30px",
 		bgColor: "#999",
 		color: "#FFF",
 		display: "block"
