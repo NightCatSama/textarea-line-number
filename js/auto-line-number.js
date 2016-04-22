@@ -25,12 +25,16 @@
 	    	"padding" : ((this.$element.outerHeight() - this.$element.height())/2) + 'px 0',
 	    	"background-color" : config.bgColor,
 	    	"position" : "absolute",
+	    	"box-sizing": "border-box",
+	    	"margin": 0,
 	    	"width" : config.width,
 	    	"height" : this.$element.height() + 'px'
 	    });
 	    this.$element.css({
 	    	"white-space" : "pre",
 	    	"resize": "none",
+	    	"margin": 0,
+	    	"box-sizing": "border-box",
 	    	"padding-left" : (parseInt(config.width) -  parseInt(this.$element.css("border-left-width")) + parseInt(this.$element.css("padding-left"))) + 'px',
 	    	"width": (this.$element.width() - parseInt(config.width)) + 'px'
 	    });
@@ -89,7 +93,7 @@
 	          data = $this.data('autoRowsNumbers');
 
 	      if (!data){ $this.data('autoRowsNumbers', (data = new AutoRowsNumbers($this, config))); }
-	      
+
 		  if (typeof option === 'string'){
 	        return false;
 	      } else {
