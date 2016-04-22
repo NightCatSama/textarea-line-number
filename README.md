@@ -1,6 +1,7 @@
 # textarea-line-number
-textarea标签自动显示行号(Textarea tags automatically displays line Numbers)
-[在线DEMO地址](http://htmlpreview.github.io/?https://github.com/NightCatSama/textarea-line-number/blob/master/demo.html)
+###textarea标签自动显示行号(Textarea tags automatically displays line Numbers)
+
+[DEMO](http://nightcatsama.github.io/textarea-line-number/)
 
 ###html
 ```html
