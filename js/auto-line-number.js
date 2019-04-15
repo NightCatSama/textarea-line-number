@@ -58,20 +58,22 @@
 			var that = event.data.that;
 
 			setTimeout(function(){
-				var value = that.$element.val();
-				value.match(/\n/g) ? that.updateLine(value.match(/\n/g).length+1) : that.updateLine(1);
-				that.syncScroll({data:{that:that}});
+				var value = that.$element.val() || that.$element.text();
+
+				var len = value.split(/\r\n|\n|\r/).length;
+				that.updateLine(len || 1);
+				that.syncScroll({data: {that: that}});
 			},0);
 		},
 
 		updateLine: function(count){
-			var that = this;
-			that.$element;
-			that.$ol.html('');
+			var html = '';
 
-			for(var i=1;i<=count;i++){
-				that.$ol.append("<div>"+i+"</div>");
+			for (var i = 1; i <= count; i++) {
+				html += '<div>' + i + '</div>';
 			}
+
+			this.$ol.html(html);
 		},
 
 		syncScroll: function(event){
