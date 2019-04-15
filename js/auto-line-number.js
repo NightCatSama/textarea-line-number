@@ -60,20 +60,20 @@
 			setTimeout(function(){
 				var value = that.$element.val() || that.$element.text();
 
-        var len = value.split(/\r\n|\n|\r/).length;
-        that.updateLine(len || 1);
-        that.syncScroll({data: {that: that}});
+				var len = value.split(/\r\n|\n|\r/).length;
+				that.updateLine(len || 1);
+				that.syncScroll({data: {that: that}});
 			},0);
 		},
 
 		updateLine: function(count){
 			var html = '';
 
-      for (var i = 1; i <= count; i++) {
-        html += '<div>' + i + '</div>';
-      }
+			for (var i = 1; i <= count; i++) {
+				html += '<div>' + i + '</div>';
+			}
 
-      this.$ol.html(html);
+			this.$ol.html(html);
 		},
 
 		syncScroll: function(event){
